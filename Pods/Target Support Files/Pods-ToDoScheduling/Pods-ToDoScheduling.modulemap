@@ -1,0 +1,6 @@
+framework module Pods_ToDoScheduling {
+  umbrella header "Pods-ToDoScheduling-umbrella.h"
+
+  export *
+  module * { export * }
+}
