@@ -21,7 +21,7 @@ class AddCategoryViewController: UIViewController {
             let ok = UIAlertAction(title: "OK", style:.default, handler: nil)
             alert.addAction(ok)
             present(alert, animated: true, completion: nil)
-        }
+        }else{
         let categoryColor = colorPicker.hexLabel.text!
         guard let appDelegate =
             UIApplication.shared.delegate as? AppDelegate else {
@@ -45,6 +45,7 @@ class AddCategoryViewController: UIViewController {
             print("Could not save. \(error), \(error.userInfo)")
         }
         self.navigationController?.popViewController(animated: true)
+        }
     }
    
     

@@ -80,7 +80,7 @@ class AddTaskViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
             let ok = UIAlertAction(title: "OK", style:.default, handler: nil)
             alert.addAction(ok)
             present(alert, animated: true, completion: nil)
-        }
+        }else{
         deadline = datePicker.date as NSDate
         // local notification begin
         let content = UNMutableNotificationContent()
@@ -117,6 +117,7 @@ class AddTaskViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         }
         
         self.navigationController?.popViewController(animated: true)
+        }
     }
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
         
